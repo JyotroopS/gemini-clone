@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    /* dark theme colors */
+    --text-color: #edf3ff;
+    --subheading-color: #97a7ca;
+    --placeholder-color: #c3cdde;
+    --primary-color: #101623;
+    --secondary-color: #283045;
+    --secondary-hover-color: #333e58;
+    --scrollbar-color: #626a7f;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+.container {
+    padding: 32px 0 60px;
+
+}
+
+.container :where(.app-header, .suggestion, .prompt-wrapper, .disclaimer-text) {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    max-width: 980px;
+}
+
+
+/* App header stylings */
+.container .app-header {
+    margin-top: 4vh;
+}
+
+.app-header .heading {
+    font-size: 3rem;
+    width: fit-content;
+    background: linear-gradient(to right, #1d7efd, #8d6fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app-header .sub-heading {
+    font-size: 2.6rem;
+    margin-top: -5px;
+    color: var(--subheading-color)
+}
+
+
+/* Suggestions stylings */
+.container .suggestion {
+    display: flex;
+    margin-top: 9.5vh;
+    gap: 15px;
+    overflow-x: auto;
+    list-style: none;
+    scrollbar-width: none;
+}
+
+.suggestion .suggestion-item {
+    width: 228px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color: var(--secondary-color);
+    flex-shrink: 0;
+    transform: 0.3s ease;
+}
+
+.suggestion .suggestion-item:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.suggestion .suggestion-item .text{
+    font-size: 1.1rem;
+}
+
+.suggestion .suggestion-item span {
+    height: 45px;
+    width: 45px;
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    justify-content: center;
+    border-radius: 50%;
+    color:#1d7efd;
+    background-color: var(--primary-color);
+}
+
+.suggestion .suggestion-item:nth-child(2) span{
+    color: #28a745;
+}
+.suggestion .suggestion-item:nth-child(3) span{
+    color: #ffc107;
+}
+.suggestion .suggestion-item:nth-child(4) span{
+    color: #6f42c1;
+}
+
+/* prompt container stylings */
+.prompt-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 0;
+    background-color: var(--primary-color);
+}
+
+.prompt-container :where(.prompt-wrapper, .prompt-form, .prompt-actions) {
+    display: flex;
+    gap: 12px;
+    height: 56px;
+    align-items: center;
+}
+
+.prompt-wrapper .prompt-form {
+    width: 100%;
+    height: 100%;
+    border-radius: 130px;
+    background-color: var(--secondary-color);
+}
+
+.prompt-form .prompt-input {
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding-left: 24px;
+    color: var(--text-color);
+}
+
+.prompt-form .prompt-input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.prompt-wrapper button {
+    width: 56px;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.prompt-wrapper button:hover {
+    background: var(--secondary-hover-color);
+}
+
+.prompt-form .prompt-actions{
+    gap: 4px;
+    margin-right: 7px;
+}
+
+.prompt-form .prompt-actions button {
+    height: 45px;
+    width: 45px;
+}
+
+.prompt-form #send-prompt-btn {
+    background-color: #1d7efd;
+    color: #fff;
+}
+
+.prompt-form #send-prompt-btn:hover {
+    background-color: #0264e3;
+}
+
+.prompt-container .disclaimer-text {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 16px 20px 0;
+    color: var(--placeholder-color);
+
+}
