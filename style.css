@@ -18,6 +18,17 @@
     --scrollbar-color: #626a7f;
 }
 
+body.light-theme {
+    /* light theme colors */
+    --text-color: #090c13;
+    --subheading-color: #7b8cae;
+    --placeholder-color: #606982;
+    --primary-color: #f3f7ff;
+    --secondary-color: #dce6f9;
+    --secondary-hover-color: #d2ddf2;
+    --scrollbar-color: #a2aac2;
+}
+
 body {
     color: var(--text-color);
     background-color: var(--primary-color);
@@ -70,7 +81,7 @@ body {
 }
 
 /* temporary */
-.container :is(.app-header, .suggestion) {
+body.chats-active .container :where(.app-header, .suggestion) {
     display: none;
 }
 
