@@ -2,6 +2,12 @@
 
 Gemini is an AI-powered chatbot that interacts with users, providing responses based on user inputs. It supports text and file inputs, simulates typing effects, and offers a dark/light theme toggle.
 
+## Screenshots
+![](assets\screenshots.png)
+
+## Live Preview 🚀
+[Click Here](https://jyotroops.github.io/gemini-clone/)
+
 ## Features
 
 - **Text Input**: Users can type their queries and receive responses from the chatbot.
