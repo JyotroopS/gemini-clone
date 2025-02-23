@@ -211,8 +211,9 @@ body.chats-active .container :where(.app-header, .suggestion) {
 .prompt-container {
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
     padding: 16px 0;
     background-color: var(--primary-color);
 }
